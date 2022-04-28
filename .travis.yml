@@ -1,9 +1,8 @@
-sudo: required
+---
+before_install:
+  - "docker build -t shreyasshettigar/docker-react -f Dockerfile.dev ."
+script:
+  - "docker run shreyasshettigar/docker-react npm run test -- --coverage"
 services:
   - docker
-# before our tests run
-before_install:
-  - docker build -t shreyasshettigar/docker-react -f Dockerfile.dev .
-
-script:
-  - docker run shreyasshettigar/docker-react npm run test -- --coverage
+sudo: required
