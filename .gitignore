@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-.travis.yml
+./.travis.yml
 
 # production
 /build
